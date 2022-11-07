@@ -2,16 +2,16 @@
 import './App.css';
 import Navbar from './components/Navbar.js';
 import React from 'react';
-// import About from './components/About';
+import About from './components/About';
 import TextForm from './components/TextForm';
 import { useState } from 'react';
 import Alert from './components/Alert';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   // Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  // Link
+} from "react-router-dom";
 
 // let name = "Vedant";
 function App() {
@@ -42,18 +42,18 @@ function App() {
   }
   return (
       <>    
-      {/* <Router> */}
+      <Router>
       <Navbar title="TextUtils" mode={mode} toggle={toggle}/>
       <Alert alert={alert}/>
       <div className="container my-3">
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the Text to be Rendered:" mode={mode}/>}></Route>
-          <Route path="/About" element={<About/>}></Route>
-        </Routes> */}
-        <TextForm showAlert={showAlert} heading="Enter the Text to be Rendered:" mode={mode}/>
+          <Route path="/About" element={<About mode={mode}/>}></Route>
+        </Routes>
+        {/* <TextForm showAlert={showAlert} heading="Enter the Text to be Rendered:" mode={mode}/> */}
         {/* <About/> */}
       </div>
-      {/* </Router> */}
+      </Router>
       </>
   );
 }
